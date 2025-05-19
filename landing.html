@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow">
+    <h2 class="text-2xl font-semibold mb-4">Tell us about yourself</h2>
+    <form action="/submit-profile" method="POST" class="space-y-4">
+      <input type="text" placeholder="Name" class="w-full border p-3 rounded" required />
+      <input type="number" placeholder="Age" class="w-full border p-3 rounded" required />
+      <input type="number" placeholder="Height (cm)" class="w-full border p-3 rounded" required />
+      <input type="number" placeholder="Weight (kg)" class="w-full border p-3 rounded" required />
+
+      <select class="w-full border p-3 rounded" required>
+        <option value="">Religion</option>
+        <option value="Hindu">Hindu</option>
+        <option value="Muslim">Muslim</option>
+        <option value="Christian">Christian</option>
+        <option value="Jain">Jain</option>
+      </select>
+
+      <select class="w-full border p-3 rounded" required>
+        <option value="">Health Goal</option>
+        <option value="muscle_gain">Muscle Gain</option>
+        <option value="weight_loss">Weight Loss</option>
+        <option value="diabetes_management">Diabetes Management</option>
+      </select>
+
+      <button type="submit" class="w-full bg-green-600 text-white p-3 rounded hover:bg-green-700">Generate Meal Plan</button>
+    </form>
+  </div>
+</body>
+</html>
